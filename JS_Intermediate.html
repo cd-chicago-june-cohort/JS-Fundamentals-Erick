@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>TITLE</title>
+    </head>
+    <body>
+        <h1>HELLO WORLD</h1>
+        <script>
+            //Part I
+            // function star_string(num){
+            //     let star = '*';
+            //     return star.repeat(num);
+            // }
+            // console.log(star_string(10));
+
+            //Part II
+            // function draw_stars(arr){
+            //     let star = '*';
+            //     for(var k=0;k<arr.length;k++){
+            //         console.log(star.repeat(arr[k]));
+            //     }
+            // }
+            // let x = [4, 6, 1, 3, 5, 7, 25];
+            // draw_stars(x);
+
+            //Part III
+            function draw_stars(arr){
+                let star = '*';
+                for(var k=0;k<arr.length;k++){
+                    if(typeof arr[k] === 'string'){
+                        for(var i=0;i<arr[k].length;i++){
+                            console.log((arr[k][i]).repeat(arr[k].length).toLowerCase());
+                            break;
+                        }
+                    }
+                    else{
+                        console.log(star.repeat(arr[k]));
+                    }
+                }
+            }
+            let x = [4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"];
+            draw_stars(x);
+        </script>
+    </body>
+</html>
