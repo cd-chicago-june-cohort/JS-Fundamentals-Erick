@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>TITLE</title>
+    </head>
+    <body>
+        <h1>HELLO WORLD</h1>
+        <script>
+            function magic_multiply(x, y){
+                if(Array.isArray(x)){
+                    newArr = [];
+                    for(var k=0;k<x.length;k++){
+                        newArr.push(x[k]*y);
+                    }
+                    return newArr;
+                }
+                else if(typeof x === 'string' && typeof y === 'string'){
+                    return('Error: Can not multiply by string');
+                }
+                else if(typeof x === 'string'){
+                    return x.repeat(y);
+                }
+                else if(typeof y === 'string'){
+                    return y.repeat(x);
+                }
+                else{
+                    return x = x * y;
+                    }
+            }
+            //Test 1
+            // let test1 = magic_multiply(5,2);
+            // console.log(test1);
+            // => 10
+
+            //Test 2
+            // let test2 = magic_multiply(0, 0);
+            // console.log(test2);
+            // => "All inputs 0"
+
+            //Test 3
+            // let test3 = magic_multiply([1, 2, 3], 2);
+            // console.log(test3);
+            // => [2, 4, 6]
+
+            //Test 4
+            // let test4 = magic_multiply(7, "three");
+            // console.log(test4);
+            // => "Error: Can not multiply by string"
+
+            //Test 5 - Bonus
+            // let test5 = magic_multiply("Brendo", 4);
+            // console.log(test5);
+            // => "BrendoBrendoBrendoBrendo"
+        </script>
+    </body>
+</html>
